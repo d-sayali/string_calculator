@@ -20,3 +20,10 @@ def test_multiple_numbers():
 def test_newline_as_delimiter():
     assert StringCalculator.add("1\n2,3") == 6
 
+
+def test_custom_single_char_delimiter():
+    assert StringCalculator.add("//;\n1;2") == 3
+
+
+def test_custom_multi_char_delimiter():
+    assert StringCalculator.add("//[***]\n1***2***3") == 6

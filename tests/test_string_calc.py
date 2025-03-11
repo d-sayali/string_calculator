@@ -27,3 +27,11 @@ def test_custom_single_char_delimiter():
 
 def test_custom_multi_char_delimiter():
     assert StringCalculator.add("//[***]\n1***2***3") == 6
+
+
+def test_multiple_custom_delimiters():
+    assert StringCalculator.add("//[*][%]\n1*2%3") == 6
+
+
+def test_multiple_custom_delimiters_with_multi_length():
+    assert StringCalculator.add("//[***][%%%]\n1***2%%%3") == 6

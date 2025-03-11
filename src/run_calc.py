@@ -10,6 +10,8 @@ def main():
         "1\n2,3",           # Newline as delimiter
         "//;\n1;2",         # Custom single-character delimiter
         "//[***]\n1***2***3",  # Custom multi-character delimiter
+        "//[*][%]\n1*2%3",  # Multiple custom delimiters
+        "//[***][%%%]\n1***2%%%3",  # Multiple custom multi-length delimiters
     ]
 
 

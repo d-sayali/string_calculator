@@ -24,5 +24,5 @@ class StringCalculator:
         # Use regex to split the numbers
         num_array = np.array(re.split("|".join(map(re.escape, delimiters)), numbers), dtype=np.int32)
 
-        # Add numbers
-        return np.sum(num_array)
+        # Add numbers, ignoring those greater than 1000
+        return np.sum(num_array[num_array <= 1000])

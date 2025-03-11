@@ -35,3 +35,7 @@ def test_multiple_custom_delimiters():
 
 def test_multiple_custom_delimiters_with_multi_length():
     assert StringCalculator.add("//[***][%%%]\n1***2%%%3") == 6
+
+
+def test_ignore_numbers_greater_than_1000():
+    assert StringCalculator.add("2,1001") == 2

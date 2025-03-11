@@ -12,6 +12,7 @@ def main():
         "//[***]\n1***2***3",  # Custom multi-character delimiter
         "//[*][%]\n1*2%3",  # Multiple custom delimiters
         "//[***][%%%]\n1***2%%%3",  # Multiple custom multi-length delimiters
+        "2,1001",           # Numbers greater than 1000 ignored
     ]
 
 

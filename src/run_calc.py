@@ -7,6 +7,7 @@ def main():
         "1",                # Single number
         "1,5",              # Two numbers
         "1,2,3,4,5",        # Multiple numbers
+        "1\n2,3",           # Newline as delimiter
     ]
 
 

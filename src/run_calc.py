@@ -16,10 +16,20 @@ def main():
     ]
 
 
-    # Run test case and print the output
+    # Run each test case and print the output
     for test_input in inputs:
-        result = StringCalculator.add(test_input)
-        print(f"Input: {repr(test_input)} => Output: {result}")
+        try:
+            result = StringCalculator.add(test_input)
+            print(f"Input: {repr(test_input)} => Output: {result}")
+        except ValueError as e:
+            print(f"Input: {repr(test_input)} => Exception: {e}")
+
+
+    # Example case that raises an exception for negative numbers
+    try:
+        print(StringCalculator.add("1,-2,3,-5"))
+    except ValueError as e:
+        print(f"Negative Number Case: {e}")
 
 
 if __name__ == "__main__":

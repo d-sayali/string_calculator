@@ -39,3 +39,13 @@ def test_multiple_custom_delimiters_with_multi_length():
 
 def test_ignore_numbers_greater_than_1000():
     assert StringCalculator.add("2,1001") == 2
+
+
+def test_negative_numbers_raise_exception():
+    with pytest.raises(ValueError, match=r"Negative numbers not allowed: -1"):
+        StringCalculator.add("-1,2,3")
+
+
+def test_multiple_negative_numbers_raise_exception():
+    with pytest.raises(ValueError, match=r"Negative numbers not allowed: -1, -5"):
+        StringCalculator.add("1,-1,2,-5")

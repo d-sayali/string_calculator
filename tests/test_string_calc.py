@@ -16,3 +16,7 @@ def test_two_numbers():
 def test_multiple_numbers():
     assert StringCalculator.add("1,2,3,4,5") == 15
 
+
+def test_newline_as_delimiter():
+    assert StringCalculator.add("1\n2,3") == 6
+

@@ -23,7 +23,7 @@ cd string-calculator
 To run the String Calculator, use the command line or integrate it into your application.
 
 ```python
-from string_calc import StringCalculator
+from calculator import StringCalculator
 
 result = StringCalculator.add("3,5,2,8,4")
 print(result)  # Output: 22

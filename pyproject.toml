@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "string-calculator"
+version = "1.0.0"
+description = "A TDD-based String Calculator in Python"
+authors = ["Sayali D. <sayali19d@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/d-sayali/string_calculator"
+keywords = ["string calculator", "TDD", "pytest"]
+
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+prompt-toolkit = "^3.0.39"
+numpy = "^1.26.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.1.1"
+pytest-cov = "^4.1.0"           # Code coverage
+black = "^24.3.0"               # Code formatting
+mypy = "^1.9.0"                 # Static type checking
+isort = "^5.13.2"               # Import sorting
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "--cov=src --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+omit = ["src/run_calc.py"]
+
+[tool.black]
+line-length = 88
+
+[tool.mypy]
+python_version = "3.8"
+strict = true
+
+[tool.isort]
+profile = "black"
+
+[tool.poetry.scripts]
+run-calculator = "run_calc:main"        # command to run 
+test = "pytest:main"                        # run tests easily using `poetry run test`
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

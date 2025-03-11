@@ -1,4 +1,4 @@
-from calculator import StringCalculator
+from src.calculator import StringCalculator
 
 def main():
     # Sample Input
